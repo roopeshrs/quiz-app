@@ -1,0 +1,146 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "verdana";
+    src: url("./assets/fonts/fa-solid-900.woff2") format('woff');
+}
+
+body {
+    font-family: verdana;
+    font-weight: 400;
+    font-size: 18px;
+    letter-spacing: 1.1px;
+}
+
+header{
+    background-color: #218380;
+    padding: 0px 20px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    height: 10vh;
+    align-items: center;
+}
+
+header .left-side{
+    cursor: pointer;
+}
+
+header .right-side{
+    cursor: default;
+}
+
+main{
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 20px;
+    flex-direction: column;
+}
+
+section.start-screen,
+section.quiz-container,
+section.score-screen,
+section.high-scores{
+    border: 1px solid hsl(0deg 0% 83%);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 10px 10px 5px 0px hsl(0deg 0% 83%);
+    cursor: default;
+    width: 60%;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+section.start-screen h1,
+section.start-screen p,
+section.quiz-container h1,
+section.score-screen h1,
+section.score-screen p,
+section.high-scores h1{
+    margin-bottom: 20px;
+}
+
+section.high-scores .controls{
+    margin-top: 20px;
+}
+
+section.start-screen button,
+section.quiz-container .options button,
+section.score-screen .form button,
+section.high-scores .controls button{
+    background-color: #218380;
+    outline: 0;
+    border: none;
+    padding: 15px;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+}
+
+section.start-screen button{
+    width: fit-content;
+}
+
+section.start-screen button:hover,
+section.quiz-container .options button:hover,
+section.score-screen .form button:hover,
+section.high-scores .controls button:hover{
+    background-color: rgba(33, 131, 128, 0.9);
+}
+
+section.quiz-container .options{
+    display: flex;
+    flex-direction: column;
+    border-bottom: 2px solid hsl(0deg 0% 83%);
+}
+
+section.quiz-container .options button{
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+section.quiz-container p.status{
+    margin-top: 20px;
+}
+
+section.score-screen .form{
+    display: flex;
+    align-items: center;
+}
+
+section.score-screen .form input{
+    margin: 0px 10px;
+    width: 100px;
+    padding: 8px;
+}
+
+.user-details{
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    list-style: none;
+    padding-left: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+    section.start-screen,
+    section.quiz-container,
+    section.score-screen,
+    section.high-scores{
+        width: 90%;
+    }
+}
+
+section.start-screen.hide,
+section.quiz-container.hide,
+section.score-screen.hide,
+section.high-scores.hide{
+    display: none;
+}
